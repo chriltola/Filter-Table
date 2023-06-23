@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bootstrap Table filter control with customize search options</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css'>
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- <div id="toolbar">
+  <button id="remove" class="btn btn-danger" disabled>
+    <i class="fa fa-remove"></i> Delete
+  </button>
+</div> -->
+
+
+<div id="toolbar">
+	<div class="d-flex justify-content-center">
+	<button type="button" class="btn btn-light btn-lg ">Excel Upload</button>
+	<div class="dropdown-container">
+		<button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-sliders"></i> Advance Search</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<div class="dropdown-list">
+					<input id="search_input" type="search" placeholder="Search states" class="dropdown-search"/>
+					<ul></ul>
+			</div>
+		</div>
+	</div>
+		</div>
+</div>
+
+
+
+<table
+  id="table"
+	data-locale="en-US"
+  data-toolbar="#toolbar"
+  data-search="true"
+  data-show-refresh="false"
+  data-show-toggle="false"
+  data-show-fullscreen="false"
+  data-show-columns="true"
+  data-detail-view="false"
+  data-show-export="false"
+  data-click-to-select="true"
+  data-detail-formatter="detailFormatter"
+  data-minimum-count-columns="2"
+  data-show-pagination-switch="false"
+  data-pagination="true"
+	data-id-field="id"
+	data-pagination-pre-text="Previous"
+	data-pagination-next-text="Next"
+	data-page-list="[10, 25, 50, 100, all]"
+	data-show-footer="false">
+	 <thead>
+    <tr>
+      <th data-field="fname" data-sortable="true">First Name</th>
+			<th data-field="lname" data-sortable="true">Last Name</th>
+			<th data-field="type" data-sortable="true">Type</th>
+			<th data-field="phone" data-sortable="true">Phone</th>
+			<th data-field="unit" data-sortable="true">Unit</th>
+			<th data-field="community" data-sortable="true">Community</th>
+			<th data-field="address" data-sortable="true">Address</th>
+			<th data-field="city" data-sortable="true">City</th>
+			<th data-field="state" data-sortable="true">State</th>
+			<th data-field="zip" data-sortable="true">Zip</th>
+			<th data-field="zip" data-sortable="true" data-visible="false">Lease
+					Start Date</th>
+			<th data-field="zip" data-sortable="true" data-visible="false">Lease End
+					Date</th>
+			<th data-field="zip" data-sortable="true" data-visible="false">Date
+					Purchased</th>
+			<th data-formatter="operateFormatter" data-events="operateEvents">
+					Actions
+			</th>
+    </tr>
+  </thead>
+</table>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script src='https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js'></script>
+<script src='https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js'></script>
+<script src='https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table-locale-all.min.js'></script>
+<script src='https://unpkg.com/bootstrap-table@1.15.4/dist/extensions/export/bootstrap-table-export.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
